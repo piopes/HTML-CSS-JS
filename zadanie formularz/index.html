@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logger.js"></script>
+  </head>
+  <body>
+  
+  <div id="container">
+    <form action="">
+      <div>
+        <label for="name">Imię:</label><br/>
+        <input type="text" id="name" name="name" required minlength="3">
+      </div>
+      <div>
+        <label for="lastname">Nazwisko:</label><br/>
+        <input type="text" id="lastname" name="lastname" required minlength="3">
+      </div>
+      <div>
+        <label for="mail">E-mail:</label><br/>
+        <input type="email" id="mail" name="mail" required>
+      </div>
+      <div>
+        <label for="sex">Wybierz płeć:</label><br>
+        <input list="choosesex" id="sexId" name="sextype" />
+        
+        <datalist id="choosesex">
+            <option value="mężczyzna">
+            <option value="kobieta">
+        </datalist>
+      </div>
+      <div>
+          <label for="acceptation">Czy akceptujesz RODO:</label><br/>
+            <input type="radio" id="yesId"
+             name="acceptation" value="yes" required>
+            <label for="yesId">tak</label>
+        
+            <input type="radio" id="noId"
+             name="acceptation" value="no">
+            <label for="noId">nie</label>
+
+      </div>
+      <div>
+        <label for="msg">Komentarz:</label><br/>
+        <textarea id="msg" name="message" maxlength="50"></textarea>
+      </div>
+      <br/>
+      <div class="button">
+          <button type="submit">Wyślij</button>
+      </div>
+      <div class="button">
+          <button type="reset">Kasuj</button>
+      </div>
+    </form>
+  </div>
+  </body>
+  </html>
